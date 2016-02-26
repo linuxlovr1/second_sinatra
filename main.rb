@@ -19,8 +19,13 @@ get "/man/:command" do
   erb :results
 end
 
-get "/man/:command" do
+get "/search_menu" do
   @command = params["input_search"]
   @result = `man #{params["input_search"]}`
   erb :search_menu
+end
+
+not_found do
+  status 404
+  "not found"
 end
