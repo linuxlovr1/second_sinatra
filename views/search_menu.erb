@@ -1,0 +1,17 @@
+<h3>Man pages search</h3>
+<form action="/results" method="POST">
+  <input type="text" placeholder="message" name="message" />
+  <input type="submit" value"/input_search" />
+</form>
+
+<a href="/command_line">Command line</a>
+<br />
+
+<h1>
+  This is the result for:
+  <%= @command.upcase %>
+</h1>
+
+<p>
+  <%= @result %>
+</p>

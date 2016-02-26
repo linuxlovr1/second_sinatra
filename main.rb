@@ -19,3 +19,8 @@ get "/man/:command" do
   erb :results
 end
 
+get "/man/:command" do
+  @command = params["input_search"]
+  @result = `man #{params["input_search"]}`
+  erb :search_menu
+end
